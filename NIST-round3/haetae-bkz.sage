@@ -2,12 +2,14 @@ load("../framework/instance_gen.sage")
 
 verbosity = 2
 
-# Dilithium-I round-3 parameters
-print("============= Dilithium-I")
-n = 4*256
-m = 4*256
-q = 8380417
-eta = 2
+#(k,\ell-1) is (m,n)/256
+
+# HAETAE-120 parameters
+print("============= HAETAE-120")
+n = 3*256
+m = 2*256
+q = 64513
+eta = 1
 D_s = {x : 1./(2*eta+1) for x in range(-eta, eta+1)}
 D_e = D_s
 
@@ -20,13 +22,13 @@ inst.estimate_attack()
 print(" Attack Estimation via simulation + probabilistic model ")
 inst.estimate_attack(probabilistic=True, lift_union_bound=True, silent=False)
 
-print("============= Dilithium-II")
+#HAETAE-180 parameters
+print("============= HAETAE-180")
 
-# Dilithium-II round-3 parameters
 n = 5*256
-m = 6*256
-q = 8380417
-eta = 4
+m = 3*256
+q = 64513
+eta = 1
 D_s = {x : 1./(2*eta+1) for x in range(-eta, eta+1)}
 D_e = D_s
 
@@ -40,13 +42,13 @@ print(" Attack Estimation via simulation + probabilistic model ")
 
 inst.estimate_attack(probabilistic=True, lift_union_bound=True, silent=False)
 
-print("============= Dilithium-III")
+#HAETAE-260 parameters
+print("============= HAETAE-260")
 
-# Dilithium-II round-3 parameters
-n = 7*256
-m = 8*256
-q = 8380417
-eta = 2
+n = 6*256
+m = 4*256
+q = 64513
+eta = 1
 D_s = {x : 1./(2*eta+1) for x in range(-eta, eta+1)}
 D_e = D_s
 
