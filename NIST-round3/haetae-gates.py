@@ -10,7 +10,7 @@ from cost import *
 # GSA Intersect:               dim=2049   δ=1.002384      β=814.54
 # Probabilistic simulation:    dim=2049                   β=834.76
 # ======= Dilithium-NL5 round3
-# GSA Intersect:               dim=3540   δ=1.002284      β=862.84  
+# GSA Intersect:               dim=2561   δ=1.002054      β=993.33  
 # Probabilistic simulation:    dim=3540                   β=883.56 
 
 print("              \t& n   \t&  β \t& β' \t& gates \t& memory ")
