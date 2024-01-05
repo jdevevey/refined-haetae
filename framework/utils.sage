@@ -211,7 +211,7 @@ simBKZ_c = [None] + [rk[-i] - sum(rk[-i:]) / i for i in range(1, 46)]
 
 pruning_proba = .5
 simBKZ_c += [RR(log(GH_sv_factor_squared(d)) / 2. -
-                log(pruning_proba) / d) / log(2.) for d in range(46, 1000)]
+                log(pruning_proba) / d) / log(2.) for d in range(46, 1500)]
 
 
 def simBKZ(l, beta, tours=1, c=simBKZ_c):
